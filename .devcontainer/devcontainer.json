@@ -1,0 +1,46 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+    "name": "Node.js",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-20",
+    "features": {},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "ritwickdey.LiveServer",
+                "esbenp.prettier-vscode",
+                "streetsidesoftware.code-spell-checker",
+                "humao.rest-client",
+                "mhutchie.git-graph"
+            ],
+            "settings": {
+                "files.associations": {
+                    "*.js": "javascriptreact"
+                },
+                "javascript.preferences.importModuleSpecifierEnding": "js",
+                "prettier.printWidth": 120,
+                "prettier.singleQuote": true,
+                "prettier.tabWidth": 4,
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+            }
+        }
+    },
+
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "npm install"
+
+    // Configure tool-specific properties.
+    // "customizations": {},
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+}
